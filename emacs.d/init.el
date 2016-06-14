@@ -6,6 +6,8 @@
   (unless (package-installed-p package)
     (package-install package)))
 
+(add-to-list 'load-path (expand-file-name "elisp" user-emacs-directory))
+
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
