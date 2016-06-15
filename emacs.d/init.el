@@ -1,5 +1,7 @@
 (setq inhibit-startup-message t)
 
+(setq ring-bell-function 'ignore)
+
 (setq frame-background-mode 'dark)
 
 (defun install-package (package)
@@ -33,3 +35,5 @@
 
 ;; get rid of that dreaded whitespace!
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(provide 'init)
