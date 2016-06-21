@@ -8,7 +8,7 @@
   (unless (package-installed-p package)
     (package-install package)))
 
-(add-to-list 'load-path (expand-file-name "elisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 (require 'package)
 (add-to-list 'package-archives
@@ -21,9 +21,13 @@
 
 ;; http://www.flycheck.org/manual/latest/index.html
 (install-package 'flycheck)
+(require 'flycheck)
 
 ;; turn on flychecking globally
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
+(require 'init-javascript)
+(require 'init-python)
 
 ;; use spaces, not tabs, for indent
 (setq-default indent-tabs-mode nil)

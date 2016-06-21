@@ -5,6 +5,7 @@
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 ;; auto-completion
+(install-package 'jedi)
 (require 'jedi)
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
